@@ -1,8 +1,9 @@
 module top #(
-    parameter BIT_TICKS = 16,
-    parameter DATA_LENGHT = 8
+    parameter BIT_TICKS = 54, 
+    parameter START = 10_800
 )(
     output logic tx,
+    output logic tx_done,
     input logic clk,
     input logic rst_n,
     input logic [7:0] din
@@ -22,7 +23,7 @@ counter #(.RST_VALUE(BIT_TICKS)) u_counter_s_tick (
 );
 
 //TX start counter
-counter #(.RST_VALUE(DATA_LENGHT)) u_counter_tx_start (
+counter #(.RST_VALUE(START)) u_counter_tx_start (
     .clk,
     .rst_n,
     .enable(1'b1),
@@ -37,7 +38,7 @@ uart_tx u_uart_tx (
     .tx_start(tx_start_ov),
     .s_tick(tick_ov),
     .din,
-    .tx_done_tick(),
+    .tx_done_tick(tx_done),
     .tx
 );
 

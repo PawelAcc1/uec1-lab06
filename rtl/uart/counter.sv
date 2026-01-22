@@ -1,7 +1,7 @@
 /* Copyright (C) 2025  AGH University of Krakow */
 
 module counter #(
-    parameter logic [9:0] RST_VALUE = 20'd500_000
+    parameter logic [19:0] RST_VALUE = 20'd500_000
 )(
     input logic clk,
     input logic rst_n,

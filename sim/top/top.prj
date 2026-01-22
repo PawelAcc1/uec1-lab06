@@ -1,0 +1,4 @@
+sv work /home/student/jcurylo/code/uec1-lab06/rtl/uart/counter.sv
+sv work /home/student/jcurylo/code/uec1-lab06/rtl/uart/uart_tx.sv
+sv work /home/student/jcurylo/code/uec1-lab06/rtl/top.sv
+sv work /home/student/jcurylo/code/uec1-lab06/sim/top/top_test.sv
