@@ -1,10 +1,10 @@
-module top_test;
+module tx_top_test;
 
 wire logic tx, tx_done;
 logic clk, rst_n;
 logic [7:0] din = 8'h8A;
 
-top u_tx (
+tx u_tx (
     .tx(tx),
     .tx_done(tx_done), 
     .clk(clk),

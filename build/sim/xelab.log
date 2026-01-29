@@ -1,0 +1,23 @@
+Vivado Simulator v2021.2
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: /home_local/Xilinx/Vivado/2021.2/bin/unwrapped/lnx64.o/xelab work.rx_top_test -snapshot rx_top_test -prj /home/student/jcurylo/code/uec1-lab06/sim/rx_top/rx_top.prj -standalone -runall 
+Multi-threading is on. Using 6 slave threads.
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/student/jcurylo/code/uec1-lab06/rtl/uart/counter.sv" into library work
+INFO: [VRFC 10-311] analyzing module counter
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/student/jcurylo/code/uec1-lab06/rtl/uart/uart_rx.sv" into library work
+INFO: [VRFC 10-311] analyzing module uart_rx
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/student/jcurylo/code/uec1-lab06/rtl/rx.sv" into library work
+INFO: [VRFC 10-311] analyzing module rx
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/student/jcurylo/code/uec1-lab06/sim/rx_top/rx_top_test.sv" into library work
+INFO: [VRFC 10-311] analyzing module rx_top_test
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module work.counter(RST_VALUE=20'b0110110)
+Compiling module work.uart_rx
+Compiling module work.rx
+Compiling module work.rx_top_test
+Built simulation snapshot rx_top_test

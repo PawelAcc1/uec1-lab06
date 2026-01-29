@@ -1,6 +1,6 @@
 # Vivado project configuration file
 
-set project_name sseg_basys3
+set project_name top_basys3
 set top_module top_basys3
 set target xc7a35tcpg236-1
 
@@ -9,11 +9,10 @@ set xdc_files {
 }
 
 set sv_files {
-    ../rtl/sseg/ring_counter.sv
-    ../rtl/sseg/hex2sseg.sv
-    ../rtl/sseg/sseg_mux.sv
-    ../rtl/sseg/sseg.sv
-    ../rtl/counter.sv
+    ../rtl/uart/counter.sv
+    ../rtl/uart/uart_tx.sv
+    ../rtl/uart/uart_rx.sv
+    ../rtl/uart_tx_out_buffer.sv
     ../rtl/top.sv
     rtl/top_basys3.sv
 }

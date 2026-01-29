@@ -1,0 +1,1 @@
+"work.rx_top_test" -snapshot "rx_top_test" -prj "/home/student/jcurylo/code/uec1-lab06/sim/rx_top/rx_top.prj" -standalone -runall 

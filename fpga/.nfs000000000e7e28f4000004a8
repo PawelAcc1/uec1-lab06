@@ -1,0 +1,63 @@
+#-----------------------------------------------------------
+# Vivado v2021.2 (64-bit)
+# SW Build 3367213 on Tue Oct 19 02:47:39 MDT 2021
+# IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+# Start of session at: Thu Jan 29 11:54:00 2026
+# Process ID: 14418
+# Current directory: /home/student/jcurylo/code/uec1-lab06/fpga
+# Command line: vivado -mode tcl -source scripts/generate_bitstream.tcl
+# Log file: /home/student/jcurylo/code/uec1-lab06/fpga/vivado.log
+# Journal file: /home/student/jcurylo/code/uec1-lab06/fpga/vivado.jou
+# Running On: cadence37, OS: Linux, CPU Frequency: 3865.820 MHz, CPU Physical cores: 4, Host memory: 16720 MB
+#-----------------------------------------------------------
+source scripts/generate_bitstream.tcl
+# set build_dir $env(FPGA_BUILD_DIR)
+# source $env(FPGA_DIR)/config/project.tcl
+## set project_name sseg_basys3
+## set top_module top_basys3
+## set target xc7a35tcpg236-1
+## set xdc_files {
+##     constraints/top_basys3.xdc
+## }
+## set sv_files {
+##     ../rtl/sseg/ring_counter.sv
+##     ../rtl/sseg/hex2sseg.sv
+##     ../rtl/sseg/sseg_mux.sv
+##     ../rtl/sseg/sseg.sv
+##     ../rtl/counter.sv
+##     ../rtl/top.sv
+##     rtl/top_basys3.sv
+## }
+# proc create_new_project {project_name target top_module build_dir} {
+#     create_project ${project_name} ${build_dir} -part ${target} -force
+# 
+#     # read files from the variables provided by the configuration file
+#     if {[info exists ::xdc_files]} {read_xdc ${::xdc_files}}
+#     if {[info exists ::sv_files]} {read_verilog -sv ${::sv_files}}
+# 
+#     set_property top ${top_module} [current_fileset]
+#     update_compile_order -fileset sources_1
+# }
+# proc generate_bitstream {} {
+#     # Run synthesis
+#     reset_run synth_1
+#     launch_runs synth_1 -jobs 8
+#     wait_on_run synth_1
+# 
+#     # Run implementation up to bitstream generation
+#     launch_runs impl_1 -to_step write_bitstream -jobs 8
+#     wait_on_run impl_1
+# }
+# puts $sv_files
+
+    ../rtl/sseg/ring_counter.sv
+    ../rtl/sseg/hex2sseg.sv
+    ../rtl/sseg/sseg_mux.sv
+    ../rtl/sseg/sseg.sv
+    ../rtl/counter.sv
+    ../rtl/top.sv
+    rtl/top_basys3.sv
+
+# create_new_project $project_name $target $top_module $build_dir
+create_project: Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 2709.754 ; gain = 2.023 ; free physical = 1321 ; free virtual = 14114
+ERROR: [Common 17-69] Command failed: File '/home/student/jcurylo/code/uec1-lab06/rtl/sseg/ring_counter.sv' does not exist

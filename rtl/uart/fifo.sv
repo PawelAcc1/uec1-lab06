@@ -23,7 +23,6 @@ module fifo #(
     logic [ADDR_WIDTH:0] wr_ptr, wr_ptr_nxt;
     logic [ADDR_WIDTH:0] rd_ptr, rd_ptr_nxt;
 
-    // --- LOGIKA SEKWENCYJNA (Rejestry) ---
     always_ff @(posedge clk, negedge rst_n) begin
         if (!rst_n) begin
             wr_ptr <= '0;
@@ -35,7 +34,7 @@ module fifo #(
         end
     end
 
-    // --- LOGIKA ZAPISU DO PAMIĘCI ---
+    //LOGIKA ZAPISU DO PAMIĘCI
     always_ff @(posedge clk) begin
         // Piszemy tylko gdy jest sygnał WR i bufor NIE jest pełny
         if (wr && !full) begin
@@ -44,7 +43,7 @@ module fifo #(
         end
     end
 
-    // --- LOGIKA KOMBINACYJNA (Next State & Flags) ---
+    //LOGIKA KOMBINACYJNA (Next State & Flag
     always_comb begin
         // Domyślne wartości (żeby uniknąć latchy)
         wr_ptr_nxt = wr_ptr;
@@ -61,7 +60,7 @@ module fifo #(
         end
     end
 
-    // --- OBSŁUGA WYJŚĆ ---
+    //OBSŁUGA WYJŚĆ
     
     // Dane wyjściowe są dostępne natychmiast ("asynchroniczny odczyt" z tablicy rejestrów)
     // W FPGA to się zsyntezuje jako Distributed RAM lub rejestry.

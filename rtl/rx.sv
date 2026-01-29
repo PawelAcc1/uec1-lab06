@@ -1,11 +1,11 @@
-module rx_top #(
+module rx #(
     parameter BIT_TICKS = 54
 )(
     input logic clk,
     input logic rst_n,
     input logic rx,
     output logic rx_done_tick,
-    output logic dout
+    output logic [7:0] dout
 );
 
 wire logic s_tick_ov;

@@ -1,0 +1,4 @@
+Running: xsim.dir/rx_top_test/axsim rx_top_test -runall
+Design successfully loaded
+Design Loading Memory Usage: 31708 KB (Peak: 31828 KB)
+Design Loading CPU Usage: 1400 ms

@@ -1,0 +1,8 @@
+0.7
+2020.2
+Oct 19 2021
+02:56:52
+/home/student/jcurylo/code/uec1-lab06/rtl/rx.sv,1769682744,systemVerilog,,,,rx,,,,,,,,
+/home/student/jcurylo/code/uec1-lab06/rtl/uart/counter.sv,1769677605,systemVerilog,,,,counter,,,,,,,,
+/home/student/jcurylo/code/uec1-lab06/rtl/uart/uart_rx.sv,1769677605,systemVerilog,,,,uart_rx,,,,,,,,
+/home/student/jcurylo/code/uec1-lab06/sim/rx_top/rx_top_test.sv,1769682860,systemVerilog,,,,rx_top_test,,,,,,,,

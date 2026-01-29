@@ -1,0 +1,38 @@
+
+*** Running vivado
+    with args -log top_basys3.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_basys3.tcl
+
+
+****** Vivado v2021.2 (64-bit)
+  **** SW Build 3367213 on Tue Oct 19 02:47:39 MDT 2021
+  **** IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+    ** Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+
+source top_basys3.tcl -notrace
+create_project: Time (s): cpu = 00:00:09 ; elapsed = 00:00:08 . Memory (MB): peak = 2715.695 ; gain = 7.957 ; free physical = 1488 ; free virtual = 11942
+Command: synth_design -top top_basys3 -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 23479
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 2715.816 ; gain = 0.000 ; free physical = 180 ; free virtual = 10370
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'top_basys3' [/home/student/jcurylo/code/uec1-lab06/fpga/rtl/top_basys3.sv:1]
+ERROR: [Synth 8-439] module 'debounce' not found [/home/student/jcurylo/code/uec1-lab06/fpga/rtl/top_basys3.sv:18]
+	Parameter N bound to: 32'sb00000000000000000000000000010110 
+ERROR: [Synth 8-6156] failed synthesizing module 'top_basys3' [/home/student/jcurylo/code/uec1-lab06/fpga/rtl/top_basys3.sv:1]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:11 . Memory (MB): peak = 2715.816 ; gain = 0.000 ; free physical = 341 ; free virtual = 10196
+---------------------------------------------------------------------------------
+RTL Elaboration failed
+INFO: [Common 17-83] Releasing license: Synthesis
+7 Infos, 0 Warnings, 0 Critical Warnings and 3 Errors encountered.
+synth_design failed
+ERROR: [Common 17-69] Command failed: Synthesis failed - please see the console or run log file for details
+INFO: [Common 17-206] Exiting Vivado at Thu Jan 29 13:13:30 2026...
+/home_local/Xilinx/Vivado/2021.2/bin/loader: line 311: 23619 Segmentation fault      (core dumped) "$RDI_PROG" "$@"
+segfault in /home_local/Xilinx/Vivado/2021.2/bin/unwrapped/lnx64.o/parallel_synth_helper -exec vivado -exec parallel_synth_helper --key LaunchHelperProcessKey_22996_1769688799 --partid xc7a35tcpg236-1 --parent_pid 22996 --parent_exe vivado, exiting...

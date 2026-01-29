@@ -10,7 +10,7 @@ wire logic [7:0] data_out;
 wire logic rx_done_tick;
 
 //top module instance
-rx_top u_rx_top (
+rx u_rx (
     .clk(clk),
     .rst_n,
     .rx(rx_line),
@@ -54,11 +54,13 @@ initial begin
         //watek 2
         begin
             @(posedge rx_done_tick) begin
+                $display("####################");
                 assert (frame[8:1] == data_out) begin
                     $display("No error detected. Expected: %b; Recieved: %b", frame[8:1], data_out);
                 end else begin
                     $display("Error detected! Expected: %b; Recieved: %b", frame[8:1], data_out);
                 end
+                $display("####################");
             end
         end
     join
